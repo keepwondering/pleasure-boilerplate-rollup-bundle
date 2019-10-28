@@ -12,12 +12,12 @@
     "build:docs": "jsdoc2md --template README.hbs --files dist/pleasure-boilerplate-rollup-bundle.js"
   },
   "devDependencies": {
-    "jsdoc-to-markdown": "^5.0.0",
-    "nodemon": "^1.19.1",
-    "rollup": "^1.12.4",
-    "rollup-plugin-alias": "^1.5.1",
-    "rollup-plugin-babel-minify": "^8.0.0",
-    "rollup-plugin-commonjs": "^10.0.0",
+    "jsdoc-to-markdown": "^5.0.2",
+    "nodemon": "^1.19.4",
+    "rollup": "^1.26.0",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-babel-minify": "^9.1.0",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0"
   }
 }
