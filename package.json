@@ -7,7 +7,7 @@
   "browser": "dist/pleasure-boilerplate-rollup-bundle.iife.js",
   "license": "MIT",
   "scripts": {
-    "buildd": "rollup -c",
+    "build": "rollup -c",
     "build:live": "nodemon -w src --exec yarn build",
     "build:docs": "jsdoc2md --template README.hbs --files dist/pleasure-boilerplate-rollup-bundle.js"
   },
