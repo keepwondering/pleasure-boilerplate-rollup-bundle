@@ -34,7 +34,7 @@ const plugins = [
     sourceMap: true // Default: true
   })
 ]
-
+const cleanName = name.indexOf('/') >= 0 ? name.split('/')[1] : name
 const banner = `/*!
  * ${ name } v${ version }
  * (c) {{{ year }}}-${ new Date().getFullYear() } ${ author }
@@ -47,7 +47,7 @@ export default [
     input: 'src/index.js',
     output: [
       {
-        file: `dist/${name}.js`,
+        file: `dist/${cleanName}.js`,
         format: 'cjs',
         banner
       },
@@ -60,7 +60,7 @@ export default [
     input: 'src/index.js',
     output: [
       {
-        file: `dist/${name}.esm.js`,
+        file: `dist/${cleanName}.esm.js`,
         format: 'esm',
         banner
       }
@@ -73,7 +73,7 @@ export default [
     input: 'src/index.js',
     output: [
       {
-        file: `dist/${name}.iife.js`,
+        file: `dist/${cleanName}.iife.js`,
         format: 'iife',
         name: '{{{ iifeName }}}',
         banner
