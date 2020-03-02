@@ -9,7 +9,7 @@
   "scripts": {
     "build": "yarn build:lib && yarn build:docs && yarn build:readme",
     "build:lib": "rollup -c{{#if config.iife}} && gzip -c dist/{{{ projectName }}}.iife.js > dist/{{{ projectName }}}.iife.js.gz{{/if}}",
-    "build:docs": "jsdoc2md --template DOCS.hbs --files dist/{{{ projectName }}}{{#if config.cjs}}{{else}}{{#if config.esm}}esm{{else}}iife{{/if}}{{/if}}.js > DOCS.md"
+    "build:docs": "jsdoc2md --template DOCS.hbs --files dist/{{{ projectName }}}{{#if config.cjs}}{{else}}{{#if config.esm}}esm{{else}}iife{{/if}}{{/if}}.js > DOCS.md",
     "build:readme": "pls docs readme --template README.hbs > README.md",
     "build:live": "nodemon -w src --exec yarn build",
     "lint": "eslint --ext .js --ignore-path .gitignore src/",
